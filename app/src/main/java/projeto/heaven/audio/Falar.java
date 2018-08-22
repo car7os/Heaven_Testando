@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public class Falar {
 
-    protected TextToSpeech tts;
+    private TextToSpeech tts;
     private Context contexto;
 
     public Falar(Context contexto){
