@@ -9,15 +9,14 @@ import java.util.Locale;
 
 public class Falar {
 
-    private TextToSpeech tts;
-    private Context contexto;
+    private static TextToSpeech tts;
+    private static Context contexto;
 
     public Falar(Context contexto){
         this.contexto = contexto;
     }
 
     public void falar(final String texto){
-
 
         tts = new TextToSpeech(contexto, new TextToSpeech.OnInitListener() {
 
@@ -36,6 +35,11 @@ public class Falar {
         });
 
     }
+
+    public boolean isFalando(){
+        return tts.isSpeaking();
+    }
+
 
 }
 
